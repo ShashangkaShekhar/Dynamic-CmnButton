@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div ng-controller="tchrCtrl">
+    <h2>{{title}}</h2>
+
+    @Html.Partial("~/Views/Shared/cmnButton.cshtml")
+    <hr />
+
+    <form name="frmTeacher">
+        <div>
+            {{tcName}}
+            <div class="form-group">
+                <label class="col-md-4 control-label">Name</label>
+                <div class="col-md-7">
+                    <input type="text" id="tcName"
+                           ng-model="tcName" />
+                </div>
+
+            </div>
+
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</div>
+
+@section JavaScript{
+    <script src="~/scripts/appScript/teacherCtrl.js"></script>
+}

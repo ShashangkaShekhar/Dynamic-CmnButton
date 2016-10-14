@@ -1,0 +1,7 @@
+﻿<div>
+    <button ng-repeat="btn in buttons"
+            ng-click="this[btn.method]()" ng-if="btn.permission == 'true'">
+        {{btn.title}}
+    </button>
+    {{lblMessage}}
+</div>
